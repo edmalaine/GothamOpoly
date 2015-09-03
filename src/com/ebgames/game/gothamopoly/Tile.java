@@ -5,20 +5,24 @@ public class Tile {
 	private String tileName;
 	private String tileColor;
 	private String tileAction;
-	private double tilePrice;
+	private int tilePrice;
+	private boolean tileOwned;
+	Player owner = new Player();
 
 	public Tile() {
 		setTileName("");
-		tileColor = "";
+		setTileColor("");
 		setTileAction("");
-		tilePrice = 0;
+		setTilePrice(0);
+		setTileOwned(false);
 	}
 	
-	public Tile(String tileName, String tileColor, String tileAction, double tilePrice) {
+	public Tile(String tileName, String tileColor, String tileAction, int tilePrice) {
 		this.setTileName(tileName);
-		this.tileColor = tileColor;
+		this.setTileColor(tileColor);
 		this.setTileAction(tileAction);
-		this.tilePrice = tilePrice;
+		this.setTilePrice(tilePrice);
+		setTileOwned(false);
 	}
 
 	public String getTileName() {
@@ -35,6 +39,30 @@ public class Tile {
 
 	public void setTileAction(String tileAction) {
 		this.tileAction = tileAction;
+	}
+
+	public int getTilePrice() {
+		return tilePrice;
+	}
+
+	public void setTilePrice(int tilePrice) {
+		this.tilePrice = tilePrice;
+	}
+
+	public String getTileColor() {
+		return tileColor;
+	}
+
+	public void setTileColor(String tileColor) {
+		this.tileColor = tileColor;
+	}
+
+	public boolean isTileOwned() {
+		return tileOwned;
+	}
+
+	public void setTileOwned(boolean tileOwned) {
+		this.tileOwned = tileOwned;
 	}
 	
 }

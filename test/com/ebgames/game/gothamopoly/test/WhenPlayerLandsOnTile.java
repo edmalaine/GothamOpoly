@@ -26,13 +26,19 @@ public class WhenPlayerLandsOnTile {
 	}
 	
 	@Test
-	public void testIfTileExists() {
-		
+	public void TilesShouldExist() {
 		player1.setPlayerLocationIndex(23);
-		
 		assertNotNull(board.getTileNameByIndex(player1.getPlayerLocationIndex()));
-		
 		// getTileName(player1.getPlayerLocationIndex());
+	}
+	
+	@Test
+	public void ShouldBeAbleToBuyUnownedTile() {
+		
+	}
+	
+	@Test
+	public void ShouldBeAbleToPayRentOnOwnedTile() {
 		
 	}
 
